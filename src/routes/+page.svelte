@@ -1,5 +1,6 @@
 <script lang="ts">
   import { debounce } from '@/lib/debounce';
+  import { getRandomExample } from '@/lib/getRandomExample';
   import { scan } from '@/lib/scan';
 
   // Compile the Typebox schema
@@ -41,7 +42,7 @@
   <div class="mx-auto w-full max-w-lg px-7">
     <!--  -->
     <header class="flex flex-col items-center gap-y-1 py-2 pt-5">
-      <h1 class="font-medium text-white">MongoDB BSON Converter</h1>
+      <h1 class="text-center font-medium text-white">MongoDB BSON Converter</h1>
       <p class="text-center text-sm text-gray-500">
         Copy a BSON from MongoDB Atlas, paste it here and get a valid query that will work with
         <code class="code rounded-md bg-gray-800 px-1.5 py-0.5 text-gray-400">insertOne()</code> or
@@ -56,12 +57,24 @@
       </p>
     </header>
 
-    <div class="h-12" />
+    <div class="h-5" />
 
+    <div class="flex justify-end pb-5">
+      <button
+        class="btn btn-ghost btn-sm flex items-center gap-x-2 font-light"
+        onclick={() => {
+          bsonValue = getRandomExample(bsonValue);
+        }}
+      >
+        <span>🎲</span>
+        <span>Get Random Example</span></button
+      >
+    </div>
     <textarea
       onfocus={() => (touched = true)}
       class="textarea textarea-bordered min-h-72 w-full text-xs"
       bind:value={bsonValue}
+      placeholder="Write your BSON here..."
     ></textarea>
 
     <div class="flex h-12 items-center gap-x-2">
@@ -102,6 +115,7 @@
         class="textarea textarea-bordered min-h-72 w-full text-xs"
         readonly
         value={convertedValue}
+        placeholder=""
       ></textarea>
     </div>
   </div>

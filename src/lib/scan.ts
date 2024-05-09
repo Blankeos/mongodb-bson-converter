@@ -1,9 +1,10 @@
+/* eslint-disable no-var */
 /* eslint-disable no-prototype-builtins */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 export function scan(obj: { [key: string]: any }, depth: number = 0): string {
   let output = '';
-  let k;
+  var k;
 
   if (!(obj instanceof Object)) throw Error(`${obj} is not an object.`);
 
