@@ -1,4 +1,16 @@
-# create-svelte
+<h1>🍃 MongoDB BSON Converter</h1>
+
+A tool I made so I can copy from Atlas and use that as an `insertOne` or `insertMany` query
+on **Studio 3T** or **MongoDB Compass Console**. It works fine so far. I have unit tests on a separate repo/account lol.
+
+I basically made a custom json parser that reformats the code into a valid query object
+that 3T or Compass Console can use.
+
+Wrote the parser with Bun and the help of its Test Runner.
+
+I plan to rewrite this in Go as well. For now, you can visit the website for this (built with Svelte).
+
+<!-- # create-svelte
 
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
 
@@ -35,4 +47,4 @@ npm run build
 
 You can preview the production build with `npm run preview`.
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment. -->
