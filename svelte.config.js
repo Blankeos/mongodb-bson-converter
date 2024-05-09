@@ -1,4 +1,4 @@
-import adapter from '@sveltejs/adapter-cloudflare';
+import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
 /** @type {import('@sveltejs/kit').Config} */
@@ -12,13 +12,8 @@ const config = {
     handler(warning);
   },
   kit: {
-    // Just the default settings: https://kit.svelte.dev/docs/adapter-cloudflare
     adapter: adapter({
-      // See below for an explanation of these options
-      routes: {
-        include: ['/*'],
-        exclude: ['<all>']
-      }
+      fallback: '200.html' // may differ from host to host
     }),
     alias: {
       // this will match src
