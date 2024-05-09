@@ -1,3 +1,6 @@
+<script>
+</script>
+
 <main class="h-full min-h-screen bg-slateblue">
   <div class="mx-auto w-full max-w-lg px-7">
     <!--  -->
@@ -12,6 +15,7 @@
 
     <div class="h-12" />
 
-    <textarea class="textarea textarea-bordered textarea-lg w-full"></textarea>
+    <textarea class="textarea textarea-bordered min-h-72 w-full text-xs"></textarea>
+    <textarea class="textarea textarea-bordered min-h-72 w-full text-xs"></textarea>
   </div>
 </main>
