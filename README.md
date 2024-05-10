@@ -10,6 +10,8 @@ Wrote the parser with Bun and the help of its Test Runner.
 
 I plan to rewrite this in Go as well. For now, you can visit the website for this (built with Svelte).
 
+![alt text](docs/image.png)
+
 <!-- # create-svelte
 
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
